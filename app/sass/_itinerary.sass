@@ -1,0 +1,249 @@
+$textMaxLines: 9
+
+.photoWrapper
+  margin: auto
+  max-width: 1600px
+  width: 100%
+  background-repeat: no-repeat
+  background-size: cover
+  background-image: url(/images/pictures/wrapImage-m.png)
+  background-position: center
+  // padding-bottom: 100%
+  height: 620px
+  // min-height: calc(100vh - 80px)
+  +breakpoint(medium)
+    background-image: url(/images/pictures/wrapImage.png)
+    position: relative
+    height: 420px
+    padding-bottom: 0
+    background-size: cover
+
+  .photoTitlesWrapper
+    align-items: flex-end
+    align-content: flex-end
+    display: flex
+    height: inherit
+    z-index: 2
+    text-align: left
+    flex-flow: row wrap
+    +breakpoint(medium)
+      height: 420px
+      justify-content: flex-end
+      flex-direction: column
+
+  .photoTitles
+    width: 100%
+    text-align: left
+  .founderTitle
+    color: white
+    font-size: rem-calc(60)
+    font-weight: 300
+    text-shadow: $textShadow
+    padding: rem-calc(27px 0 21px 0)
+    +breakpoint(medium)
+      font-size: rem-calc(50)
+      padding: rem-calc(20px 0 22px 0)
+
+  .founderSubtitle
+    color: white
+    font-weight: 400
+    text-transform: uppercase
+    text-shadow: $textShadow
+    font-size: rem-calc(24)
+    +breakpoint(medium)
+      font-size: rem-calc(16)
+
+  .infoItinerary
+    display: flex
+    color: #fff
+    justify-content: flex-start
+    text-align: left
+    width: 100%
+    margin-bottom: rem-calc(18px)
+    .category
+      display: flex
+      align-items: center
+      text-shadow: $textShadow
+      color: #fff
+      font-size: rem-calc(16)
+      padding: rem-calc(0 20px)
+      box-shadow: 1px 0 0 0 rgba(255, 255, 255, .3)
+
+      +breakpoint(medium)
+        padding: 0 20px 0 0px
+        margin-right: 20px
+        height: 24px
+        .w-icon
+          margin-right: 10px
+      span
+        display: none
+        +breakpoint(medium)
+          display: block
+      &:last-child
+        box-shadow: none
+    .day
+      text-transform: uppercase
+      font-size: rem-calc(22)
+      margin-right: rem-calc(3px)
+      +breakpoint(medium)
+        font-size: rem-calc(18)
+        margin-right: 46px
+      .w-icon
+        margin-right: 10px
+
+// content-------------------------------------
+.content
+  display: flex
+  justify-content: center
+  flex-flow: row wrap
+  width: 100%
+  padding: rem-calc(40px 0)
+  +breakpoint(large)
+    justify-content: space-between
+.userInfo
+  width: 100%
+  max-width: rem-calc(341px)
+  display: flex
+  flex-flow: row wrap
+  color: #3d380a
+  font-size: rem-calc(14)
+  line-height: rem-calc(20)
+  margin: rem-calc(40px 0 23px)
+  +breakpoint(medium)
+    align-content: flex-start
+  .avatar
+    height: rem-calc(80px)
+    width: rem-calc(80px)
+    border-radius: rem-calc(6px)
+    margin: rem-calc(0 20px 40px 0)
+    +breakpoint(medium)
+      margin: 0px 20px 19px 0
+
+  .position
+    font-weight: 700
+  .nameUser
+    margin: rem-calc(4px 0 0px)
+    font-weight: 400
+  .star
+    .fa
+      letter-spacing: -3px
+    .fa-star
+      color: #eed002
+    .fa-star-o
+      color: #d9d8c3
+
+
+  .progressContet
+    width: 100%
+    display: flex
+    justify-content: space-between
+    position: relative
+    align-content: center
+    height: rem-calc(20px)
+    align-items: center
+    margin-bottom: rem-calc(35px)
+    +breakpoint(medium)
+      margin-bottom: 21px
+  .start,
+  .end
+    max-width: rem-calc(57px)
+    width: 100%
+    +text-overflow
+  .end
+    text-align: right
+
+  .progressbar
+    max-width: rem-calc(222px)
+    width: 100%
+    height: rem-calc(10px)
+    background-color: white
+    border: 1px solid #dfdcb0
+    border-radius: rem-calc(4px)
+    display: flex
+    align-items: center
+    .track
+      height: rem-calc(6px)
+      background-color: #b9e005
+      border-radius: 3px
+      margin: rem-calc(0 1px)
+    #track1
+      width: 53%
+    #track2
+      width: 60%
+    #track3
+      width: 33%
+
+.descriptions
+  max-width: rem-calc(557px)
+  width: 100%
+  color: #272723
+  font-size: rem-calc(14)
+  position: relative
+  margin-bottom: rem-calc(45px)
+  +breakpoint(medium)
+    margin-bottom: 36px
+    margin-top: 40px
+  .title
+    color: #3d2723
+    font-weight: 700
+.text-desc
+  line-height: rem-calc(20)
+  height: rem-calc(20 * 4)
+  overflow: hidden
+  transition:  all .35s
+  +breakpoint(medium)
+    margin-top: 28px
+    height: rem-calc(20 * $textMaxLines)
+
+.loveIt
+  width: 100%
+  max-width: rem-calc(369px)
+  margin: 42px auto 100px
+  margin-top: rem-calc(42px)
+  margin-bottom: rem-calc(100px)
+  text-align: center
+  color: #3d380a
+  padding: rem-calc(0 20px)
+  .titlePath
+    font-size: rem-calc(35)
+    font-weight: 700
+    margin: rem-calc(45px 0 36px)
+  .description
+    font-size: rem-calc(22)
+    line-height: rem-calc(30)
+  .group-bl
+    margin: 28px auto 0
+    margin-top: rem-calc(28px)
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-flow: row wrap
+  .linkPath
+    margin-top: rem-calc(35px)
+    color: #3d380a
+    font-size: rem-calc(20)
+    text-transform: uppercase
+
+  +breakpoint(medium)
+    padding: 0
+    margin: 43px auto 106px
+    .titlePath
+      font-size: rem-calc(20)
+      margin: 25px auto 24px
+    .description
+      font-size: rem-calc(14)
+      line-height: rem-calc(16)
+      padding: 0 20px
+    .group-bl
+      margin: 28px auto 0
+      justify-content: space-between
+    .linkPath
+      margin-top: 0
+      font-size: rem-calc(11)
+
+.show
+  text-align: center
+  cursor: pointer
+  font-size: rem-calc(20)
+  i
+    color: #2158d5

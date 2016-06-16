@@ -1,0 +1,164 @@
+.menu-wrap
+
+  .logo
+    width: 100%
+    height: 60px
+    background-color: rgba(69, 60, 37, 0.4)
+    padding: 16px 40px
+  a
+    color: #b8b7ad
+    &:hover, &:focus
+      color: #c94e50
+
+.content-wrap
+  -webkit-overflow-scrolling: touch
+.show-menu
+  .content-overlay
+    position: absolute
+    background-color: rgba(46, 40, 25, 0.54)
+    width: 100%
+    height: 100%
+    z-index: 3
+    top: 0
+    left: 0
+  .butto-overlay
+    &:after
+      content: ''
+      position: absolute
+      background-color: rgba(46, 40, 25, 0.54)
+      width: 100%
+      height: 100%
+      z-index: 3
+      top: 0
+      left: 0
+
+/* Menu Button */
+
+.menu-button
+  position: fixed
+  z-index: 1000
+  margin: 1em
+  padding: 0
+  width: 2.5em
+  height: 2.25em
+  border: none
+  text-indent: 2.5em
+  font-size: 1.5em
+  color: transparent
+  background: transparent
+  &::before
+    position: absolute
+    top: 0.5em
+    right: 0.5em
+    bottom: 0.5em
+    left: 0.5em
+    background: linear-gradient(#373a47 20%, transparent 20%, transparent 40%, #373a47 40%, #373a47 60%, transparent 60%, transparent 80%, #373a47 80%)
+    content: ''
+  &:hover
+    opacity: 0.6
+
+/* Close Button */
+
+.close-button
+  width: 1em
+  height: 1em
+  position: absolute
+  right: 1em
+  top: 1em
+  overflow: hidden
+  text-indent: 1em
+  font-size: 0.75em
+  border: none
+  background: transparent
+  color: transparent
+  &::before, &::after
+    content: ''
+    position: absolute
+    width: 3px
+    height: 100%
+    top: 0
+    left: 50%
+    background: #bdc3c7
+  &::before
+    transform: rotate(45deg)
+  &::after
+    transform: rotate(-45deg)
+
+/* Menu */
+
+.menu-wrap
+  position: absolute
+  left: 0
+  top: 0
+  z-index: 1001
+  width: 340px
+  height: 100%
+  overflow: hidden
+  background-color: rgba(78,68,51,1)
+  background: rgba(78, 68, 51, 1)
+  background: url(/images/backgroundMenu.png) no-repeat
+  background-size: cover
+  font-size: 1.15em
+  transform: translate3d(-360px, 0, 0)
+  transition: transform 0.4s
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1)
+
+.menu
+  height: 100%
+
+.icon-list
+  height: 100%
+  transform: translate3d(0, 100%, 0)
+  width: 100%
+
+  a
+    border-bottom: solid 1px rgba(69, 60, 37, 0.5)
+    padding-left: 40px
+    display: block
+    padding: 0.8em
+    text-decoration: none
+    transform: translate3d(0, 500px, 0)
+    transition: transform 0s 0.4s
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1)
+    &:nth-child(2)
+      transform: translate3d(0, 1000px, 0)
+    &:nth-child(3)
+
+      transform: translate3d(0, 1500px, 0)
+    &:nth-child(4)
+      transform: translate3d(0, 2000px, 0)
+    &:nth-child(5)
+      transform: translate3d(0, 2500px, 0)
+    &:nth-child(6)
+      transform: translate3d(0, 3000px, 0)
+    i
+      font-size: rem-calc(34)
+    span
+      margin-left: 38px
+      font-weight: 700
+      color: rgba(255, 255, 255, 0.7)
+      font-size: 18px
+  transition: transform 0s 0.4s
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1)
+
+/* Shown menu */
+
+.show-menu
+  .menu-wrap
+    transform: translate3d(0, 0, 0)
+    transition: transform 0.8s
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1)
+  .icon-list
+    transform: translate3d(0, 0, 0)
+    transition: transform 0.8s
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1)
+    a
+      transform: translate3d(0, 0, 0)
+      transition: transform 0.8s
+      transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1)
+      transition-duration: 0.9s
+  .content::before
+    opacity: 1
+    transition: opacity 0.8s
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1)
+    transform: translate3d(0, 0, 0)

@@ -1,0 +1,15 @@
+!!!5
+%html
+  = Haml::Engine.new(File.read('app/haml/includes/_head.haml')).render
+  %body
+    - type = 'Audio'
+    %main.ltinerary.show-deteils
+      = Haml::Engine.new(File.read('app/haml/includes/_header.haml')).render
+      .grid-container
+        = Haml::Engine.new(File.read('app/haml/includes/_leftSidbar.haml')).render
+      #map
+        #map-canvas
+      = Haml::Engine.new(File.read('app/haml/includes/_footer.haml')).render
+
+
+

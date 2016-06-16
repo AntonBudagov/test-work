@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='' name='keywords'>
+    <meta content='' name='description'>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'>
+    <meta content='#fff' name='msapplication-TileColor'>
+    <meta content='#fff' name='theme-color'>
+    <title>Title</title>
+    <link href='css/main.css' rel='stylesheet'>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin,cyrillic' rel='stylesheet'>
+    <link href='//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css' rel='stylesheet'>
+    <link href='//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css' rel='stylesheet'>
+  </head>
+  <body>
+    <main>
+      <header class='header'>
+        <div class='headerContent grid-container'>
+          <div class='menu'>
+            <div class='menu-wrap'>
+              <nav class='menu'>
+                <a class='logo' href=''>
+                  <img alt='Wanderist' src='/images/logoH.png'>
+                </a>
+                <div class='icon-list'>
+                  <a href='#'>
+                    <i class='fa fa-fw fa-star-o'></i>
+                    <span>Itineraries</span>
+                  </a>
+                  <a href='#'>
+                    <i class='fa fa-fw fa-bell-o'></i>
+                    <span>Contests</span>
+                  </a>
+                  <a href='#'>
+                    <i class='fa fa-fw fa-envelope-o'></i>
+                    <span>Messages</span>
+                  </a>
+                  <a href='#'>
+                    <i class='fa fa-fw fa-comment-o'></i>
+                    <span>Comments</span>
+                  </a>
+                  <a href='#'>
+                    <i class='fa fa-fw fa-bar-chart-o'></i>
+                    <span>Analytics</span>
+                  </a>
+                  <a href='#'>
+                    <i class='fa fa-fw fa-newspaper-o'></i>
+                    <span>Reading List</span>
+                  </a>
+                </div>
+              </nav>
+            </div>
+            <!-- %button#open-button.menu-button Open Menu -->
+            <div class='content-wrap'>
+              <div class='content-overlay'></div>
+            </div>
+            <div class='headerLeft'>
+              <div class='cd-nav-trigger' id='cd-nav-trigger'>
+                <span></span>
+              </div>
+              <div class='headerLinks butto-overlay'>
+                <a class='headerLink active' href='/'>
+                  <i class='wi-binoculars w-icon'></i>
+                  Overview
+                </a>
+                <a class='headerLink' href='/Itinerary.html'>
+                  <i class='wi-details w-icon'></i>
+                  Details
+                </a>
+              </div>
+            </div>
+            <div class='headerRight'>
+              <div class='shareLinks'>
+                <span>Share this itinerary:</span>
+                <a>
+                  <i class='fa fa-facebook-square' href='#'></i>
+                </a>
+                <a>
+                  <i class='fa fa-twitter-square' href='#'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class='shareLinks'>
+            <a class='headerLink' href='#'></a>
+            <a class='headerLink' href='#'></a>
+          </div>
+        </div>
+      </header>
+      <div class='grid-container'>
+        <div class='photoWrapper'>
+          <div class='photoTitlesWrapper grid-content'>
+            <div class='photoTitles'>
+              <h2 class='brandTitle founderSubtitle' id='page-Audio'>ITINERARY</h2>
+              <h1 class='brandSubtitle founderTitle'>Trip to Fabulous Las Vegas</h1>
+            </div>
+            <div class='infoItinerary'>
+              <div class='day'>2 days</div>
+              <div class='category'>
+                <i class='icon wi-family w-icon'></i>
+                <span>family</span>
+              </div>
+              <div class='category'>
+                <i class='icon wi-food w-icon'></i>
+                <span>foodie</span>
+              </div>
+              <div class='category'>
+                <i class='icon wi-cart w-icon'></i>
+                <span>shopping</span>
+              </div>
+              <div class='category'>
+                <i class='icon wi-dog w-icon'></i>
+                <span>frienly</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='content grid-content'>
+          <div class='userInfo'>
+            <div class='avatar'>
+              <img alt='Local Expert' src='/images/pictures/avatar1.png'>
+            </div>
+            <div class='name'>
+              <div class='position'>Local Expert</div>
+              <div class='nameUser'>Audrey Tautou</div>
+              <div class='star'>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star-o'></i>
+                <i class='fa fa-star-o'></i>
+              </div>
+            </div>
+            <div class='progressContet'>
+              <div class='start'>Buget</div>
+              <div class='progressbar'>
+                <div class='track' id='track1'></div>
+              </div>
+              <div class='end'>Luxury</div>
+            </div>
+            <div class='progressContet'>
+              <div class='start'>Relaxed</div>
+              <div class='progressbar'>
+                <div class='track' id='track2'></div>
+              </div>
+              <div class='end'>Active</div>
+            </div>
+            <div class='progressContet'>
+              <div class='start'>Desolate</div>
+              <div class='progressbar'>
+                <div class='track' id='track3'></div>
+              </div>
+              <div class='end'>Crowdy</div>
+            </div>
+          </div>
+          <div class='descriptions'>
+            <h5 class='title'>Overview</h5>
+            <div class='text-desc'>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.</p>
+              <p>Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus... ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</p>
+            </div>
+            <div class='show'>
+              <i class='fa fa-angle-down'></i>
+            </div>
+          </div>
+        </div>
+        <div class='dayAcardion grid-content'>
+          <nav class='animated bounceInDown'>
+            <ul>
+              <!-- day 1 -->
+              <li class='sub-menu wi-shadow w-elem'>
+                <div class='wrapLink'>
+                  <a class='countDay' href='#message'>Day 1</a>
+                  <div class='arrows'>
+                    <i class='fa fa-angle-up'></i>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <div class='acardionContent'>
+                      <div class='timLine wi-timeline w-elem'>
+                        <div class='time1'>10.00</div>
+                        <div class='time2'>15.00</div>
+                        <div class='time3'>18.00</div>
+                      </div>
+                      <div class='map'>
+                        <img alt='' src='images/pictures/map.png'>
+                      </div>
+                      <div class='infoCards'>
+                        <div class='imgCard'>
+                          <img alt='' src='images/pictures/card1.png'>
+                        </div>
+                        <div class='descriptionCard'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit</div>
+                        <div class='linkCard wi-shadow-small'>
+                          <a _target='blank' href=''>
+                            <i class='wi-mark-google w-icon'></i>
+                            Show on the map
+                          </a>
+                        </div>
+                      </div>
+                      <div class='infoCards'>
+                        <div class='imgCard'>
+                          <img alt='' src='images/pictures/card2.png'>
+                        </div>
+                        <div class='descriptionCard'>Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia</div>
+                        <div class='linkCard wi-shadow-small'>
+                          <a _target='blank' href=''>
+                            <i class='wi-mark-google w-icon'></i>
+                            Show on the map
+                          </a>
+                        </div>
+                      </div>
+                      <div class='infoCards'>
+                        <div class='imgCard'>
+                          <img alt='' src='images/pictures/card3.png'>
+                        </div>
+                        <div class='descriptionCard'>Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.</div>
+                        <div class='linkCard wi-shadow-small'>
+                          <a _target='blank' href=''>
+                            <i class='wi-mark-google w-icon'></i>
+                            Show on the map
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- day 2 -->
+              <li class='sub-menu wi-shadow w-elem'>
+                <div class='wrapLink hide'>
+                  <a class='countDay' href='#message'>Day 2</a>
+                  <div class='arrows'>
+                    <i class='fa fa-angle-down'></i>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <div class='acardionContent'>
+                      <div class='map'>
+                        <img alt='' src='images/pictures/map.png'>
+                      </div>
+                      <div class='infoCards'>
+                        <div class='imgCard'>
+                          <img alt='' src='images/pictures/card1.png'>
+                        </div>
+                        <div class='descriptionCard'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit</div>
+                        <div class='linkCard wi-shadow-small'>
+                          <a _target='blank' href=''>
+                            <i class='wi-mark-google w-icon'></i>
+                            Show on the map
+                          </a>
+                        </div>
+                      </div>
+                      <div class='infoCards'>
+                        <div class='imgCard'>
+                          <img alt='' src='images/pictures/card2.png'>
+                        </div>
+                        <div class='descriptionCard'>% Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi autem labore, voluptate provident recusandae, magni!</div>
+                        <div class='linkCard wi-shadow-small'>
+                          <a _target='blank' href=''>
+                            <i class='wi-mark-google w-icon'></i>
+                            Show on the map
+                          </a>
+                        </div>
+                      </div>
+                      <div class='infoCards'>
+                        <div class='imgCard'>
+                          <img alt='' src='images/pictures/card3.png'>
+                        </div>
+                        <div class='descriptionCard'>Lorem ipsum dolor sit amet, consectetur</div>
+                        <div class='linkCard wi-shadow-small'>
+                          <a _target='blank' href=''>
+                            <i class='wi-mark-google w-icon'></i>
+                            Show on the ma
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- day 3 -->
+              <li class='sub-menu wi-shadow w-elem'>
+                <div class='wrapLink hide'>
+                  <a class='countDay' href='#message'>Day 3</a>
+                  <div class='arrows'>
+                    <i class='fa fa-angle-down'></i>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <div class='acardionContent'>
+                      <div class='map'>
+                        <img alt='' src='images/pictures/map.png'>
+                      </div>
+                      <div class='infoCards'>
+                        <div class='imgCard'>
+                          <img alt='' src='images/pictures/card1.png'>
+                        </div>
+                        <div class='descriptionCard'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit</div>
+                        <div class='linkCard wi-shadow-small'>
+                          <a _target='blank' href=''>
+                            <i class='wi-mark-google w-icon'></i>
+                            Show on the map
+                          </a>
+                        </div>
+                      </div>
+                      <div class='infoCards'>
+                        <div class='imgCard'>
+                          <img alt='' src='images/pictures/card2.png'>
+                        </div>
+                        <div class='descriptionCard'>% Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi autem labore, voluptate provident recusandae, magni!</div>
+                        <div class='linkCard wi-shadow-small'>
+                          <a _target='blank' href=''>
+                            <i class='wi-mark-google w-icon'></i>
+                            Show on the map
+                          </a>
+                        </div>
+                      </div>
+                      <div class='infoCards'>
+                        <div class='imgCard'>
+                          <img alt='' src='images/pictures/card3.png'>
+                        </div>
+                        <div class='descriptionCard'>Lorem ipsum dolor sit amet, consectetur</div>
+                        <div class='linkCard wi-shadow-small'>
+                          <a _target='blank' href=''>
+                            <i class='wi-mark-google w-icon'></i>
+                            Show on the map
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class='loveIt'>
+          <div class='w-elem wi-pathPlin'></div>
+          <h5 class='titlePath'>Love this itinerary?</h5>
+          <div class='description'>Use it to create a new contest and local experts will get a better sense of the trip you want</div>
+          <div class='group-bl'>
+            <button class='brendBtnYellow'>Create A New contest</button>
+            <a class='linkPath' href=''>Learn more</a>
+          </div>
+        </div>
+      </div>
+      <footer class='footer'>
+        <div class='grid-container footerContent'>
+          <div class='navigationWrapper'>
+            <nav>
+              <a class='linkFooter' href=''>Home</a>
+              <a class='linkFooter' href=''>Itineraries</a>
+              <a class='linkFooter' href=''>About</a>
+            </nav>
+          </div>
+          <a class='logo' href='' title='Logo'>
+            <svg height='27.000000pt' id='logo' preserveaspectratio='xMidYMid meet' version='1.0' viewbox='0 0 57.000000 27.000000' width='57.000000pt' xmlns='http://www.w3.org/2000/svg'>
+              <g fill='#000' id='logo' stroke='none' transform='translate(0.000000,27.000000) scale(0.100000,-0.100000)'>
+                <path d='M456 255 c4 -9 0 -15 -7 -15 -8 0 -30 -23 -50 -50 l-36 -50 -48 51&#x000A;-48 51 -51 -51 -51 -50 -35 49 c-27 39 -41 50 -62 50 -23 0 -31 -7 -43 -37 -9&#x000A;-20 -18 -48 -22 -61 -5 -21 -3 -23 23 -20 26 3 34 -4 73 -60 l44 -63 63 62 63&#x000A;63 59 -64 59 -64 44 67 c47 72 65 82 75 42 3 -14 9 -25 13 -25 7 0 56 109 50&#x000A;113 -53 38 -110 77 -114 77 -2 0 -2 -7 1 -15z'></path>
+              </g>
+            </svg>
+          </a>
+          <div class='shareLinks'>
+            <a>
+              <i class='fa fa-facebook-square' href='#'></i>
+            </a>
+            <a>
+              <i class='fa fa-twitter-square' href='#'></i>
+            </a>
+            <div class='copyright'>(c) Wanderist 2014</div>
+          </div>
+        </div>
+      </footer>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src='//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
+      <script src='http://maps.googleapis.com/maps/api/js'></script>
+      <script src='js/all.js'></script>
+    </main>
+  </body>
+</html>

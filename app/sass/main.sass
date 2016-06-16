@@ -1,0 +1,85 @@
+@import variables
+@import _header
+@import _leftMenu
+@import _dayAcardion
+@import _footer
+
+@import _itinerary
+@import _itinerary_details
+
+
+*
+  outline: none
+  box-sizing: border-box
+  user-select: none
+  &::selection
+    background-color: $brand
+    color: white
+
+html
+  font-size: 12px
+  font-family: $defaultFont
+  color: $defaultColor
+  word-wrap: break-word
+  overflow-wrap: break-word
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+  +breakpoint(medium)
+    font-size: 16px
+
+body
+  font-family: inherit
+  color: inherit
+  min-height: 100%
+  height: auto
+  max-width: 100%
+  overflow-y: auto
+  overflow-x: hidden
+  word-spacing: .3px
+
+
+img
+  max-width: 100%
+  height: auto
+  -ms-interpolation-mode: bicubic
+  display: inline-block
+  vertical-align: middle
+  border: 0
+
+main
+  overflow-x: hidden
+  &.show-map
+    overflow: hidden
+    height: 100vh
+
+.grid-container
+  max-width: 100rem
+  margin: 0 auto
+  height: 100%
+
+.grid-content
+  max-width: 940px
+  margin: 0 auto
+  padding: 0 19px
+  +breakpoint(medium)
+    padding: 0
+
+#map-canvas, #map-canvas2
+  height: 100%
+  width: 100%
+  position: center
+
+.show-menu
+  overflow: hidden
+  // position: fixed
+
+.ltinerary
+  height: 100%
+  .headerRight
+    display: none
+
++breakpoint(medium)
+  .ltinerary
+    .headerRight
+      display: flex

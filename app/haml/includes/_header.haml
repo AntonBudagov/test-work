@@ -1,0 +1,8 @@
+%header.header
+  .headerContent.grid-container
+    .menu
+      = Haml::Engine.new(File.read('app/haml/includes/_leftMenu.haml')).render
+      = Haml::Engine.new(File.read('app/haml/includes/_menu.haml')).render
+    .shareLinks
+      %a.headerLink{:href => "#"}
+      %a{:class => "headerLink", :href => "#"}

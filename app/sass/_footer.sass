@@ -1,0 +1,75 @@
+
+.footer
+  background-color: #453c25
+  box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.2)
+  width: 100%
+  position: relative
+  nav
+    display: flex
+    flex-flow: column
+  .logo
+    max-width: rem-calc(57px)
+    width: 100%
+    height: rem-calc(27px)
+    margin-left: rem-calc(-28px)
+    top: rem-calc(38px)
+    left: 50%
+    position: absolute
+    #logo
+      fill: #796b46
+      transition: all .35s
+      height: auto
+      width: rem-calc(57px)
+    &:hover
+      #logo
+        fill: #fff
+
+  .linkFooter
+    color: white
+    font-size: rem-calc(14)
+    line-height: rem-calc(20)
+    text-decoration: none
+
+  +breakpoint(medium)
+    nav
+      flex-flow: row
+    .linkFooter
+      margin-right: rem-calc(20px)
+
+  .footerContent
+    height: rem-calc(100px)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    align-content: center
+    padding: rem-calc(0 20px)
+
+    +breakpoint(medium)
+      padding: rem-calc(0 140px)
+
+  .shareLinks
+    flex-flow: wrap
+    flex: rem-calc(0 200px)
+    justify-content: flex-end
+    font-size: rem-calc(18)
+    line-height: rem-calc(24)
+    .copyright
+      color: #796b46
+      font-size: rem-calc(22)
+      line-height: rem-calc(20)
+    a
+      font-size: rem-calc(30px)
+      margin: rem-calc(0 0 10px 10px)
+      i
+        color: #fff
+      &:first-child
+        margin: rem-calc(0 0 10px 0)
+
+    +breakpoint(medium)
+      font-size: rem-calc(14)
+      line-height: rem-calc(20)
+      flex: rem-calc(0 125px)
+      .copyright
+        font-size: rem-calc(14)
+        line-height: rem-calc(20)
+

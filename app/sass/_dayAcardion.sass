@@ -1,0 +1,191 @@
+.headerTitle
+  display: block
+  width: 100%
+  text-decoration: none
+  cursor: pointer
+  position: relative
+  transition: 0.2s linear
+  height: 100%
+  border-top: 2px dashed rgba(80, 76, 41, .1)
+  border-bottom: 2px dashed rgba(80, 76, 41, .1)
+  background-image: linear-gradient(to right, white 0%, #f5f4e2 100%)
+
+.dayAcardion
+  max-width: 940px
+  width: 100%
+  background-color: #f5f4e2
+  border: 1px solid #e4e3d2
+  position: relative
+  padding: 23px 0!important
+
+  nav
+    position: relative
+    width: 100%
+    left: 0
+  li
+    ul
+      list-style: none
+      margin: 0
+      padding: rem-calc(20px)
+  ul
+    .sub-menu
+      &:last-child
+        .wrapLink
+          .countDay
+            border-bottom: 2px dashed rgba(80, 76, 41, .1)
+
+  +breakpoint(medium)
+    border-radius: 10px
+    li
+      ul
+        padding: 0px
+
+  .wrapLink
+    background-image: linear-gradient(to right, #fff 0%, #f5f4e2 100%)
+    padding: rem-calc(4px 0 4px)
+    height: rem-calc(60px)
+    position: relative
+    &.hide
+      .headerTitle
+        border-bottom: 2px dashed rgba(80, 76, 41, 0)
+        transition: .2s linear
+
+  .countDay
+    @extend .headerTitle
+    color: #3d380a
+    font-size: rem-calc(20)
+    font-weight: 700
+    text-align: center
+    line-height: rem-calc(54px)
+  .arrows
+    position: absolute
+    right: rem-calc(60px)
+    top: 50%
+    width: rem-calc(30px)
+    height: rem-calc(30px)
+    background-color: white
+    border: 2px solid #fede06
+    margin-top: rem-calc(-15px)
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    .fa
+      color: #3d380a
+      font-family: FontAwesome
+      font-weight: 400
+      font-size: rem-calc(20)
+
+  .acardionContent
+    margin: rem-calc(40px 20px)
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-end
+    align-content: flex-start
+    align-items: flex-start
+    position: relative
+    .timLine
+      display: none
+      position: absolute
+      width: 16px
+      top: 33%
+      height: 1106px
+      background-repeat: repeat
+      background-image: url(/images/timelineMb.png)
+      background-position: 0 0
+      +breakpoint(640)
+        display: block
+      .time1, .time2, .time3
+        color: #a29948
+        font-family: $fontTrip
+        font-size: rem-calc(22)
+        position: absolute
+      .time1
+        top: -16px
+        right: -13px
+      .time2
+        top: 50%
+        left: -13px
+      .time3
+        bottom: -30px
+        right: -13px
+    .map
+      width: 100%
+      height: 420px
+      background: #ddd
+      border-radius: 9px
+      box-shadow: 0 2px 0 1px rgba(0, 0, 0, 0.1)
+
+    +breakpoint(840)
+      margin: 40px 60px
+      justify-content: space-between
+      .timLine
+        background: url('/images/spriteElements.png') no-repeat top left
+        background-position: 0 -20px
+        width: 70px
+        height: 329px
+        .time1, .time2, .time3
+            font-size: rem-calc(14)
+        .time2
+          bottom: 50px
+          top: auto
+        .time3
+          bottom: -20px
+      .map
+        width: 340px
+        height: 220px
+        align-self: flex-start
+      .timLine
+        height: 330px
+        width: 70px
+        left: 50%
+        top: 50%
+        margin-left: -35px
+        margin-top: -165px
+
+// Card
+.infoCards
+  margin-top: rem-calc(40px)
+  max-width: 480px
+  background-color: white
+  border-radius: 9px
+  width: 100%
+  padding-bottom: rem-calc(20px)
+  +breakpoint(840)
+    margin-top: 0px
+    box-shadow: 0 2px 0 1px rgba(0, 0, 0, 0.1)
+    width: 100%
+    max-width: 340px
+    overflow: hidden
+    height: auto
+    padding-bottom: 15px
+    height: auto
+    align-self: flex-end
+.imgCard
+  // background-color: #113
+  // height: 183px
+
+.descriptionCard
+  padding: rem-calc(19px 28px 19px 17px)
+  font-size: rem-calc(22)
+  +breakpoint(medium)
+    font-size: rem-calc(14)
+.linkCard
+  background-image: linear-gradient(to right, white 0%, #f5f4e2 100%)
+  padding: rem-calc(5px 0 6px)
+  height: rem-calc(60px)
+  a
+    @extend .headerTitle
+    color: #ec4b36
+    display: flex
+    align-items: center
+    padding: rem-calc(0 20px)
+    font-size: rem-calc(22)
+    border-top: 1px dashed rgba(80, 76, 41, 0.1)
+    border-bottom: 1px dashed rgba(80, 76, 41, 0.1)
+
+  +breakpoint(medium)
+    height: 40px
+    a
+      font-size: rem-calc(14)

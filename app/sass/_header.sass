@@ -1,0 +1,187 @@
+.header
+  background-color: #c8b485
+  height: rem-calc(80px)
+  width: 100%
+  +breakpoint(medium)
+    height: rem-calc(60px)
+
+
+.headerContent
+  // position: relative
+  +breakpoint(medium)
+    padding: rem-calc(0 20px)
+
+.headerLeft
+  flex: 1 1
+  display: flex
+  justify-content: flex-start
+  transform: translate3d(0, 0, 0)
+  transition: transform 0.4s
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1)
+  z-index: 3
+.show-menu
+  .headerLeft
+    transform: translate3d(0px, 0, 0)
+    transition: transform 0.8s
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1)
+    +breakpoint(medium)
+      // transform: translate3d(320px, 0, 0)
+    .cd-nav-trigger
+      position: absolute
+      right: 0
+      z-index: 3
+      +breakpoint(medium)
+        transform: translate3d(0px, 0, 0)
+        position: relative
+        right: auto
+
+
+.headerRight
+  flex: rem-calc(500px)
+  display: flex
+  justify-content: flex-end
+  margin-top: rem-calc(25px)
+  margin-right: rem-calc(19px)
+  +breakpoint(medium)
+    flex: 1
+    margin: 0
+
+.headerLinks
+  display: flex
+  justify-content: center
+  align-items: center
+  flex: 50px 1 1
+  position: relative
+  +breakpoint(medium)
+    flex: 0
+
+.headerLink
+  background-color: #c8b485
+  display: block
+  color: #443b25
+  font-family: $defaultFont
+  font-size: rem-calc(24)
+  font-weight: 400
+  line-height: rem-calc(20)
+  text-decoration: none
+  line-height: rem-calc(80px)
+  width: 100%
+  text-align: center
+  +text-overflow
+  &.active
+      background-color: rgba(250, 250, 242, 0.2)
+      font-weight: 700
+  .w-icon
+    display: none
+  +breakpoint(small)
+    .w-icon
+      display: inline-block
+
+  +breakpoint(medium)
+    padding: rem-calc(0 30px 0)
+    width: auto
+    line-height: rem-calc(60px)
+    font-size: rem-calc(18)
+    &:first-child
+      box-shadow: 1px 0px 0px rgba(69, 60, 37, 0.1), -1px 0px 0px rgba(69, 60, 37, 0.1)
+    &:last-child
+      box-shadow: 1px 0px 0px rgba(69, 60, 37, 0.1)
+
+.shareLinks
+  span
+    color: #fff
+    font-size: rem-calc(15)
+    margin-right: rem-calc(10px)
+  +breakpoint(medium)
+    span, .fa
+      color: #453c25
+
+
+.menu
+  display: flex
+  justify-content: stertch
+  align-items: center
+  flex-wrap: wrap
+  +breakpoint(medium)
+    justify-content: space-between
+
+.nav
+  display: none
+
+.cd-nav-trigger
+  float: left
+  position: relative
+  display: block
+  padding: rem-calc(0 20px)
+  overflow: hidden
+  width: rem-calc(90px)
+  height: rem-calc(80px)
+  white-space: nowrap
+  color: transparent
+  cursor: pointer
+  &.nav-is-visible
+    background-color: #a42338
+    box-shadow: 0 3px 0 #851d2e
+    +breakpoint(medium)
+      width: rem-calc(70px)
+      padding: rem-calc(0 20px)
+  +breakpoint(medium)
+    width: rem-calc(50px)
+    height: rem-calc(60px)
+    padding: 0
+  span
+    position: absolute
+    top: 50%
+    margin-top: 0px
+    +breakpoint(medium)
+      margin-top: rem-calc(-3px)
+    &::before
+      top: rem-calc(-14px)
+    +breakpoint(medium)
+      &::before
+        top: rem-calc(-10px)
+    &::after
+      top: rem-calc(14px)
+    +breakpoint(medium)
+      &::after
+        top: 11px
+  &.nav-is-visible span
+    &::before
+      transform: translateX(0.375rem) translateY(-.25rem) rotate(45deg)
+    &::after
+      transform: translateX(0.375rem) translateY(.25rem) rotate(-45deg)
+    +breakpoint(medium)
+      &::before
+        transform: translateX(.25rem) translateY(0px) rotate(45deg)
+      &::after
+        transform: translateX(.25rem) translateY(.125rem) rotate(-45deg)
+  span
+    &::before, &::after
+      content: ''
+      right: 0
+      transform: translateZ(0)
+      backface-visibility: hidden
+      transform-origin: 0% 50%
+      transition: transform 0.2s
+    position: absolute
+    display: inline-block
+    height: rem-calc(5px)
+    width: rem-calc(50px)
+    background: #453c25
+    +breakpoint(medium)
+      height: rem-calc(3px)
+      width: rem-calc(30px)
+    &::before, &::after
+      position: absolute
+      display: inline-block
+      height: rem-calc(6px)
+      width: rem-calc(50px)
+      background: #453c25
+      +breakpoint(medium)
+        height: rem-calc(3px)
+        width: rem-calc(30px)
+  &.nav-is-visible span
+    background: rgba(255, 255, 255, 0)
+    &::before, &::after
+      transition: background 0.2s
+      background: #fff

@@ -1,0 +1,326 @@
+$textMaxLines: 3
+
+.buttonWrap
+  display: none
+
+.ltinerary-details
+  width: 200%
+  overflow: hidden
+  overflow-y: scroll
+  position: relative
+  z-index: 2
+  background: #fafaf2
+
+  .wrap-ltinerary
+    display: flex
+    width: 100%
+
+    transform: translate3d(0, 0, 0)
+    transition: transform 0.4s
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1)
+
+  .content
+    width: 100%
+    flex-flow: column
+    align-items: center
+    justify-content: center
+    padding: rem-calc(45px 20px)
+    overflow-x: hidden
+    flex: 0 0 50%
+
+  .infoCards
+    max-width: 100%
+    margin-top: 0
+    width: 100%
+    padding: 0
+    box-shadow: 0 2px 0 1px rgba(0, 0, 0, 0.1)
+    img
+      width: 100%
+  .infoCard-title
+    color: #453c25
+    font-size: rem-calc(24)
+    display: flex
+    justify-content: space-between
+    padding: rem-calc(21px 20px 15px 18px)
+    +breakpoint(medium)
+      .wi-food-black
+        background-position: 0px -84px
+        width: 11px
+        height: 22px
+        background-size: 18px auto
+    .title
+      display: flex
+      cursor: pointer
+    .title-content
+      margin-left: rem-calc(20px)
+    h3
+      font-size: rem-calc(32)
+      font-weight: 400
+      color: #453c25
+      margin-bottom: rem-calc(12px)
+    .subTitle
+      color: #a1a094
+    .time
+      display: flex
+    .wi-clock
+      margin-right: rem-calc(10px)
+
+
+  .descriptionCard
+    padding: rem-calc(17px 18px 0)
+  .fa-angle-up
+    font-size: rem-calc(30)
+    +breakpoint(medium)
+      font-size: rem-calc(20)
+  .text-desc
+    margin-top: 0
+    font-size: rem-calc(24)
+    line-height: rem-calc(27)
+    height: rem-calc(27 * $textMaxLines)
+    overflow: hidden
+    transition:  all .35s
+    +breakpoint(medium)
+      font-size: rem-calc(14)
+      line-height: rem-calc(16)
+      height: rem-calc(16 * $textMaxLines)
+  .show-toggle
+    text-align: center
+    cursor: pointer
+    font-size: rem-calc(30)
+    margin-bottom: rem-calc(19px)
+    i
+      color: #2158d5
+  .wrapLine
+    position: relative
+    align-self: flex-start
+    height: rem-calc(100px)
+    display: flex
+    align-items: center
+    .verticalLine
+      height: rem-calc(97px)
+      background-color: #ffe00c
+      width: rem-calc(2px)
+      position: absolute
+      left: 50%
+      top: 0
+      margin: rem-calc(2px -1px 0 0)
+    i
+      position: relative
+      width: rem-calc(60px)
+      height: rem-calc(60px)
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      background-color: white
+      border: 2px solid #ffdf06
+      font-size: rem-calc(26)
+      color: #453c25
+      z-index: 2
+    +breakpoint(medium)
+      height: 80px
+      .verticalLine
+        height: 77px
+      i
+        width: 40px
+        height: 40px
+        font-size: 17px
+.button_show
+  width: rem-calc(49px)
+  height: rem-calc(60px)
+  background-color: #fede06
+  box-shadow: 0 3px 0 #dfc40a
+  border-top-left-radius: 9px
+  border-bottom-left-radius: 9px
+  top: rem-calc( 40px)
+  cursor: pointer
+  right: 50%
+  position: absolute
+  z-index: 1
+  +breakpoint(medium)
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    border-top-right-radius: 9px
+    border-bottom-right-radius: 9px
+/* data slider ======================================= */
+.wrap-date
+  display: flex
+  margin: 0
+  justify-content: flex-start
+  width: 100%
+  +breakpoint(400)
+    margin-left: rem-calc(50px)
+  +breakpoint(medium)
+    margin-left: 105px
+  .button_show
+    i
+      font-size: rem-calc(40)
+      color: #443b25
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      height: 100%
+.selectDate
+  max-width: 450px
+  width: 100%
+  height: 50px
+  background-color: #fff
+  border-radius: 6px
+  border: 1px solid #ffdf06
+  .dateSlide
+    width: 150px
+    text-align: center
+    line-height: 48px
+  .slick-current
+    background-color: #ffdf06
+  .slick-arrow
+    margin-top: rem-calc(-5px)
+    &:before
+      font-family: FontAwesome
+      color: #443b25
+      font-size: rem-calc(28)
+  .slick-next
+    right: rem-calc(-25px)
+    &:before
+      content: "\f105"
+  .slick-prev
+    left: rem-calc(-25px)
+    &:before
+      content: "\f104"
++breakpoint(medium)
+  .selectDate
+    max-width: rem-calc(360px)
+    height: rem-calc(30px)
+    .dateSlide
+      width: rem-calc(120px)
+      line-height: rem-calc(28px)
+      font-size: rem-calc(14)
+    .slick-arrow
+      margin-top: 0
+      &:before
+        font-size: rem-calc(20)
+// Map  ==================================
+#map
+  height: calc(100vh - 160px)
+  position: absolute
+  top: 60px
+  width: 100%
+  left: 0
+  z-index: 1
+  display: none
+.infoWindowMap
+  width: 250px
+  height: 130px
+  padding: 23px 0 20px 17px
+  // border: 1px solid #e4e3d2
+  border-radius: 5px
+  display: flex
+  flex-flow: column
+  .title
+    display: flex
+  h3
+    color: #453c25;
+    font-size: rem-calc(18)
+    font-weight: 300
+    margin-bottom: 5px
+  .title-content
+    margin-left: 6px
+  .subTitle
+    color: #a1a094
+    font-size: rem-calc(13)
+    font-weight: 400
+    margin-bottom: 22px
+  .wi-dog
+    -webkit-filter: grayscale(100%) brightness(10%) contrast(100%)
+    background-size: 14px auto
+    background-position: 0 -99px
+    width: 14px
+    height: 15px
+  .link
+    text-decoration: none
+    font-size: rem-calc(13)
+    color: #453c25
+    i
+      font-size: rem-calc(15)
+      margin-right: 6px
+  .phone
+    margin-bottom: 8px
+
+.map-details
+  width: 100%
+  height: 100vh
+  border-left: 6px solid #fede06
+  flex: 0 0 50%
+
+.show-map
+  .wrap-ltinerary
+    transform: translate3d(-50%, 0, 0)
+
+  .button_show
+    left: 50%
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    border-top-right-radius: 9px
+    border-bottom-right-radius: 9px
+// Scroll  ==================================
+scroll
+.ltinerary-details::-webkit-scrollbar-thumb
+  background-color: #e4e3d2
+  height: 4px
+.ltinerary-details::-webkit-scrollbar-track
+  background-color: #fff
+  border: solid 1px #e4e3d2
+.ltinerary-details::-webkit-scrollbar
+  background-color: #e4e3d2
+  border-radius: 2px
+  width: 6px
+
++breakpoint(medium)
+  .buttonWrap
+    width: 600px
+    position: absolute
+    display: block
+    .button_show
+      width: 40px
+      height: 40px
+      position: absolute
+      right: 0
+      display: block
+      top: 40px
+      z-index: 2
+      i
+        font-size: 28px
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 40px
+  .ltinerary-details
+    height: calc(100vh - 160px)
+    min-height: calc(100vh - 160px)
+    max-width: 560px
+    .wrap-ltinerary
+      // width: 200%
+    .content
+      padding: 40px
+      flex: 1 0
+    .infoCards
+      max-width: 470px
+    .infoCard-title
+      font-size: rem-calc(14)
+      padding: 21px 15px 22px 19px
+      .title-content
+        margin-left: 14px
+      h3
+        font-size: rem-calc(20)
+        font-weight: 300
+        margin-bottom: 3px
+
+  .map-details
+    display: none
+
+  .button_show
+    display: none
+
+  #map
+    display: block

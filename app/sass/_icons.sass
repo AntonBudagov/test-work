@@ -1,0 +1,146 @@
+.w-icon
+  background: url('/images/spriteIcons2.png') no-repeat top left
+  width: 20px
+  height: 20px
+  display: inline-block
+  &:before
+    content: ''
+    display: table
+
+.wi-binoculars
+  background-position: 0 0
+  height: 18px
+  width: 25px
+
+.wi-details
+  background-position: 0 -28px
+  height: 20px
+  width: 25px
+
+.wi-family
+  background-position: 0 -287px
+  width: 34px
+  height: 30px
+
+.wi-food
+  background-position: 0 -327px
+  width: 20px
+  height: 30px
+
+.wi-food-black
+  background-position: 0 -161px
+  width: 20px
+  height: 36px
+
+.wi-cart
+  background-position: 0 -207px
+  width: 33px
+  height: 30px
+
+.wi-dog
+  background-position: 0 -247px
+  width: 30px
+  height: 30px
+
+.wi-clock
+  background-position: 0 -131px
+  width: 20px
+  height: 23px
+
+.wi-mark-google
+  background-size: 16px auto
+  background-position: 0 -170px
+  width: 16px
+  height: 24px
+
++breakpoint(medium)
+  .w-icon
+    background-size: 25px auto
+  .wi-binoculars
+    height: 14px
+    width: 20px
+  .wi-details
+    background-position: 0 -16px
+    height: 20px
+    width: 20px
+  .wi-family
+    background-size: 23px auto
+    background-position: 0 -194px
+    width: 23px
+    height: 20px
+  .wi-food
+    background-position: 0 -240px
+    width: 13px
+    height: 20px
+  .wi-food-black
+    background-position: 0 -116px
+    width: 20px
+    height: 33px
+
+  .wi-cart
+    background-size: 22px auto
+    background-position: 0 -135px
+    width: 22px
+    height: 20px
+  .wi-dog
+    background-size: 20px auto
+    background-position: 0 -144px
+    width: 20px
+    height: 20px
+  .wi-mark-google
+    background-size: 16px auto
+  .wi-clock
+    background-size: 23px auto
+    background-position: 0 -90px
+    height: 14px
+// elements
+.w-elem
+  background: url('/images/spriteElements.png') no-repeat top left
+  display: inline-block
+  &:before
+    content: ''
+    display: table
+
+.wi-timeline
+
+.wi-shadow
+  background: url('/images/shadow.png') no-repeat top left
+  background-position: rem-calc(0 60px)
+  width: 100%
+  background-size: contain
+
+.wi-shadow-small
+  &:after
+    background: url('/images/shadow.png') no-repeat top left
+    content: ''
+    display: table
+    height: 6px
+    width: 100%
+    background-size: 100%
+    margin: 6px 0 0 0
+    +breakpoint(medium)
+      &:after
+        height: 4px
+
+.wi-pathPlin
+  background: url('/images/pathPlain.png') no-repeat top left
+  background-position: 0 0
+  background-size: contain
+  width: 100%
+  padding-bottom: 139px
+  +breakpoint(medium)
+    background: url('/images/spriteElements.png') no-repeat top left
+    background-position: 0 -1475px
+    width: 193px
+    height: 74px
+    padding-bottom: 0
+
+.wi-timeline
+  background-position: 0 -20px
+  width: 70px
+  height: 329px
+
+.wi-timeline-m
+  background-position: 0 -359px
+  width: 16px
+  height: 1106px

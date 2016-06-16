@@ -1,0 +1,75 @@
+!!!5
+%html
+  = Haml::Engine.new(File.read('app/haml/includes/_head.haml')).render
+  %body
+    - type = 'Audio'
+    %main
+      = Haml::Engine.new(File.read('app/haml/includes/_header.haml')).render
+      .grid-container
+        .photoWrapper
+          .photoTitlesWrapper.grid-content
+            .photoTitles
+              %h2.brandTitle.founderSubtitle{:id => "page-#{type}"} ITINERARY
+              %h1.brandSubtitle.founderTitle Trip to Fabulous Las Vegas
+            .infoItinerary
+              %div.day 2 days
+              .category
+                %i.icon.wi-family.w-icon
+                %span family
+              .category
+                %i.icon.wi-food.w-icon
+                %span foodie
+              .category
+                %i.icon.wi-cart.w-icon
+                %span shopping
+              .category
+                %i.icon.wi-dog.w-icon
+                %span frienly
+
+        .content.grid-content
+          .userInfo
+            %div.avatar
+              %img{:src => "/images/pictures/avatar1.png", :alt => "Local Expert"}
+            %div.name
+              .position Local Expert
+              .nameUser Audrey Tautou
+              .star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star-o
+                %i.fa.fa-star-o
+            .progressContet
+              .start Buget
+              .progressbar
+                .track#track1
+              .end Luxury
+            .progressContet
+              .start Relaxed
+              .progressbar
+                .track#track2
+              .end Active
+            .progressContet
+              .start Desolate
+              .progressbar
+                .track#track3
+              .end Crowdy
+          .descriptions
+            %h5.title Overview
+            .text-desc
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+              %p Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus... ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+            .show
+              %i.fa.fa-angle-down
+        = Haml::Engine.new(File.read('app/haml/includes/_dayAcardion.haml')).render
+        .loveIt
+          .w-elem.wi-pathPlin
+          %h5.titlePath Love this itinerary?
+          .description Use it to create a new contest and local experts will get a better sense of the trip you want
+          .group-bl
+            %button.brendBtnYellow Create A New contest
+            %a.linkPath{:href => ""} Learn more
+      = Haml::Engine.new(File.read('app/haml/includes/_footer.haml')).render
+
+
+
